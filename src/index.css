@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #0f172a;
+  background-color: #fdfcf7;
+  --fluid-headline: clamp(2.5rem, 6vw, 4.5rem);
+  --fluid-subhead: clamp(1.05rem, 1.8vw, 1.35rem);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(240, 217, 182, 0.4), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(255, 237, 213, 0.6), transparent 50%),
+    linear-gradient(180deg, #fffdf4 0%, #f7f1e6 75%);
+  color: #0f172a;
+}
+
+.fluid-headline {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: var(--fluid-headline);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.fluid-subhead {
+  font-size: var(--fluid-subhead);
+  line-height: 1.55;
+}

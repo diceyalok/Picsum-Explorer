@@ -29,3 +29,52 @@ body {
   font-size: var(--fluid-subhead);
   line-height: 1.55;
 }
+
+/* Masonry Grid Styles */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -2rem; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 2rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Optional: Responsive gutter */
+@media (max-width: 768px) {
+  .my-masonry-grid {
+    margin-left: -1rem;
+  }
+  .my-masonry-grid_column {
+    padding-left: 1rem;
+  }
+}
+
+/* Ambient Mode Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ambient-fade {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Smooth transitions for ambient mode */
+.ambient-transition {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Prevent selection during ambient mode */
+.ambient-mode-active {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
